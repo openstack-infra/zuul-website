@@ -1,0 +1,47 @@
+- job:
+    name: zuul-website-build
+    description: |
+      Publishes a draft version of the Zuul website.
+    success-url: html/
+    run: playbooks/build-site.yaml
+    post-run: playbooks/publish-draft-site.yaml
+
+- job:
+    name: zuul-website-publish
+    parent: publish-project-website
+    description: |
+      Publishes the Zuul website.
+    protected: True  # Only run this job in this repo
+    roles: openstack-infra/zuul-jobs
+    secrets:
+      - secret: zuul-website-afs-service
+        name: afs
+    run: playbooks/build-site.yaml
+    post-run: playbooks/publish-site.yaml
+
+project:
+  check:
+    jobs:
+      - zuul-website-build
+  gate:
+    jobs:
+      - zuul-website-build
+  post:
+    jobs:
+      - zuul-website-publish
+
+- secret:
+    name: zuul-website-afs-service
+    data:
+      service_name: service/zuul-weebsite
+      keytab: !encrypted/pkcs1-oaep
+        - X6ib/tIVVThIuxY4KPcwHuJ8wMP4PqfzNgbDt+FMu1Pnx0LmPzWnP0cSYXg6JkVwfs5yL
+          bePiO1AAawCzCWkkI/nXtHMhxuiFm0ZkgtZHwM+5Sz1z0xfFM4qqDrbF2yyU3odoQjg3O
+          7izCprZkNREp+H7jmeNugeOHREY81+sp0iRAnMZb+HOQ70WaGdub4Oi6sCcO35GFkkjra
+          jVBhVTfeFUrjYBEwqlGSH3yJa683l2G9M9pCxtLBHa1yb4RHu2efrYmbqseVFSdt6jb4H
+          4vFIV5zvIfCbPhzXho/tXLBSlNRJ4mlfVQQL3VBOfNtECX6iNs30a/+cYBUGIpBHVRSAV
+          JFKyWc5QAghZ0gQnNOppI7sw+fnu9LxG+CGYE15umrL1572Kdl/0M5jy515YdqArZjdqt
+          lEG9UK5ZqDCKIUhKuXV0mLcpQxo3IAbnQVzQddjrXXFc38mEaiAaHjCc4qk4V4P1ur8DP
+          EN6CaPhJ7k0zICcP0zUAGMendIIkDXNu1BAs3py7APXs8xYP21heORCHmWaUYeLs2mYLT
+          fhn3oZC32uGOJpeLuDZV5aEGRyAsfWQJMaGfD4PUrIQe/dU2IylmsMZLCSqIIJNv0j5gi
+          dB0h5pOnJLPAM6kr9VVEoAxrgLGkpP8EGt2omBwJ5zKAbporma3MYzpvSVLT6Y=
