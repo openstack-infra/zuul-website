@@ -1,0 +1,4 @@
+- name: Copy site to output directory
+  copy:
+    src: "{{ zuul_work_dir }}/www/"
+    dest: "{{ output_dir }}"

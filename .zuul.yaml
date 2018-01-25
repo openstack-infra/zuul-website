@@ -1,7 +1,31 @@
+- job:
+    name: zuul-website-build
+    description: |
+      Publishes a draft version of the Zuul website.
+    success-url: html/
+    run: playbooks/build-site.yaml
+    post-run: playbooks/publish-draft-site.yaml
+    nodeset:
+      nodes: []
+
+- job:
+    name: zuul-website-publish
+    parent: publish-zuul-website
+    description: |
+      Publishes the Zuul website.
+    protected: True  # Only run this job in this repo
+    run: playbooks/build-site.yaml
+    post-run: playbooks/publish-site.yaml
+    nodeset:
+      nodes: []
+
 - project:
     check:
       jobs:
-        - noop
+        - zuul-website-build
     gate:
       jobs:
-        - noop
+        - zuul-website-build
+    post:
+      jobs:
+        - zuul-website-publish
