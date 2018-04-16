@@ -4,7 +4,8 @@ The Zuul website is currently static, however, if it later is built
 by a static site generator, or otherwise needs pre-processing,
 this role should perform that.
 
-Right now, it just copies files.
+Right now, it just copies files from the zuul-website and
+zuul-website-media repos.
 
 **Role Variables**
 
