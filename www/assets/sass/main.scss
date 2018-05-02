@@ -103,6 +103,11 @@
 		margin: 0 0 2em 0;
 	}
 
+	#logo {
+	        height: 1em;
+		margin-left: 0.75em;
+	}
+
 	h1, h2, h3, h4, h5, h6 {
 		color: inherit;
 		font-weight: 600;
@@ -565,7 +570,7 @@
 
 	#header {
 		text-align: center;
-		padding: 3em 0 0 0;
+		padding: 2em 0 0 0;
 		background-color: #fff;
 		background-image:			url('images/bg02.png'),		url('images/bg02.png'),		url('images/bg01.png');
 		background-position:		top left,					top left,					top left;
@@ -573,8 +578,9 @@
 		background-repeat:			no-repeat,					no-repeat,					repeat;
 
 		h1 {
-			padding: 0 0 2.75em 0;
+			padding: 0 0 2em 0;
 			margin: 0;
+			text-align: left;
 
 			a {
 				font-size: 4em;
@@ -586,18 +592,10 @@
 
 	#nav {
 		cursor: default;
-		background-color: #333;
-		@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3))', 'url("images/bg01.png")'));
-		padding: 0;
-
-		&:after {
-			content: '';
-			display: block;
-			width: 100%;
-			height: 0.75em;
-			background-color: _palette(accent, bg);
-			background-image: url("images/bg01.png");
-		}
+		padding: 0 2.75em 0 0;
+		position: absolute;
+		right: 0;
+		top: 0;
 
 		> ul {
 			margin: 0;
@@ -608,11 +606,12 @@
 				margin-left: 1em;
 
 				a {
-					color: #c0c0c0;
+					color: _palette(dark-blue);
 					text-decoration: none;
+					font-weight: 600;
 					border: 0;
 					display: block;
-					padding: 1.5em 0.5em 1.35em 0.5em;
+					padding: 2em 0.5em 0.5em 0.5em;
 				}
 
 				&:first-child {
@@ -621,41 +620,30 @@
 
 				&:hover {
 					a {
-						color: #fff;
+						color: _palette(light-blue);
 					}
 				}
 
 				&.current {
-					font-weight: 600;
-
 					&:before {
-						@include vendor('transform', 'rotateZ(45deg)');
-						width: 0.75em;
-						height: 0.75em;
+						width: 100%;
+						height: 0.15em;
 						content: '';
 						display: block;
 						position: absolute;
-						bottom: -0.5em;
-						left: 50%;
-						margin-left: -0.375em;
-						background-color: _palette(accent, bg);
+						bottom: 0;
+						background-color: _palette(dark-blue);
 						background-image: url("images/bg01.png");
 					}
 
 					a {
-						color: #fff;
+						color: _palette(dark-blue);
 					}
 				}
 
 				&.active {
 					a {
-						color: #fff;
-					}
-
-					&.current {
-						&:before {
-							opacity: 0;
-						}
+						color: _palette(light-blue);
 					}
 				}
 
@@ -669,8 +657,7 @@
 /* Dropotron */
 
 	.dropotron {
-		background-color: #333;
-		@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0))', 'url("images/bg01.png")'));
+		background-color: white;
 		border-radius: _size(radius);
 		color: #fff;
 		min-width: 10em;
@@ -683,15 +670,16 @@
 			padding: 0 1.1em 0 1em;
 
 			> a {
-				color: #c0c0c0;
+				color: _palette(dark-blue);
 				text-decoration: none;
+				font-weight: 600;
 				border: 0;
 			}
 
 			&.active,
 			&:hover {
 				> a {
-					color: #fff;
+					color: _palette(light-blue);
 				}
 			}
 		}
@@ -897,10 +885,10 @@
 		/* Header */
 
 			#header {
-				padding: 2em 0 0 0;
+				padding: 1em 0 0 0;
 
 				h1 {
-					padding: 0 0 1.75em 0;
+					padding: 0 0 1em 0;
 				}
 			}
 
