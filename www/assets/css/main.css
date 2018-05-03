@@ -1,5 +1,14 @@
 @import url("font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+@font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-Bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("OpenSans-Regular-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: bold; }
 /*
 	Arcana by HTML5 UP
 	html5up.net | @ajlkn
@@ -1388,9 +1397,9 @@ body {
 
 body, input, select, textarea {
   color: #474747;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16pt;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.65em; }
 
 a {
@@ -1428,7 +1437,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none; }
   h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
     font-style: normal;
-    font-weight: 300; }
+    font-weight: 400; }
 
 h2 {
   font-size: 1.75em;
@@ -1817,7 +1826,6 @@ input[type="button"],
       #nav > ul > li a {
         color: #071d49;
         text-decoration: none;
-        font-weight: 600;
         border: 0;
         display: block;
         padding: 2em 0.5em 0.5em 0.5em; }
@@ -1856,7 +1864,6 @@ input[type="button"],
     .dropotron > li > a {
       color: #071d49;
       text-decoration: none;
-      font-weight: 600;
       border: 0; }
     .dropotron > li.active > a, .dropotron > li:hover > a {
       color: #41b6e6; }
@@ -2125,7 +2132,7 @@ input[type="button"],
       z-index: 1; }
       #titleBar .title em {
         font-style: normal;
-        font-weight: 300; }
+        font-weight: 400; }
     #titleBar .toggle {
       text-decoration: none;
       border: 0;
