@@ -165,6 +165,15 @@
 		}
 	}
 
+	article {
+		h3 {
+		    clear: both;
+		}
+		p {
+		    margin: 0 0 1em 0;
+		}
+	}
+
 	header {
 		p {
 			color: _palette(fg-light);
@@ -282,6 +291,19 @@
 			display: block;
 			float: left;
 			margin: 0 2em 2em 0;
+			position: relative;
+			top: 0.25em;
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		&.right {
+			display: block;
+			float: right;
+			margin: 0 0 2em 2em;
 			position: relative;
 			top: 0.25em;
 

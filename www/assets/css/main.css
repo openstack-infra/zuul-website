@@ -1461,6 +1461,11 @@ blockquote {
 section.special, article.special {
   text-align: center; }
 
+article h3 {
+  clear: both; }
+article p {
+  margin: 0 0 1em 0; }
+
 header p {
   color: #999;
   font-size: 1.25em;
@@ -1561,6 +1566,15 @@ label {
     position: relative;
     top: 0.25em; }
     .image.left img {
+      display: block;
+      width: 100%; }
+  .image.right {
+    display: block;
+    float: right;
+    margin: 0 0 2em 2em;
+    position: relative;
+    top: 0.25em; }
+    .image.right img {
       display: block;
       width: 100%; }
   .image.fit {
