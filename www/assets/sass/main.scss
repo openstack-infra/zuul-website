@@ -1,8 +1,8 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
+@import 'libs/fonts';
 @import url("font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 
 /*
 	Arcana by HTML5 UP
@@ -73,9 +73,9 @@
 
 	body, input, select, textarea {
 		color: _palette(fg);
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Open Sans', sans-serif;
 		font-size: 16pt;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 1.65em;
 	}
 
@@ -121,7 +121,7 @@
 
 		em {
 			font-style: normal;
-			font-weight: 300;
+			font-weight: 400;
 		}
 	}
 
@@ -630,7 +630,6 @@
 				a {
 					color: _palette(dark-blue);
 					text-decoration: none;
-					font-weight: 600;
 					border: 0;
 					display: block;
 					padding: 2em 0.5em 0.5em 0.5em;
@@ -694,7 +693,6 @@
 			> a {
 				color: _palette(dark-blue);
 				text-decoration: none;
-				font-weight: 600;
 				border: 0;
 			}
 
@@ -1109,7 +1107,7 @@
 
 					em {
 						font-style: normal;
-						font-weight: 300;
+						font-weight: 400;
 					}
 				}
 
