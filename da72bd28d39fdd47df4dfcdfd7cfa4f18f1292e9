@@ -1,0 +1,9 @@
+Code-Review+2: Jeremy Stanley <fungi@yuggoth.org>
+Code-Review+2: James E. Blair <corvus@inaugust.com>
+Workflow+1: James E. Blair <corvus@inaugust.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 01 Jun 2018 21:23:06 +0000
+Reviewed-on: https://review.openstack.org/568975
+Project: openstack-infra/zuul-website
+Branch: refs/heads/master
