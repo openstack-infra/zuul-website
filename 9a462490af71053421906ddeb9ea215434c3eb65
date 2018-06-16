@@ -1,0 +1,9 @@
+Code-Review+2: Tobias Henkel <tobias.henkel@bmw.de>
+Code-Review+2: Joshua Hesketh <josh@nitrotech.org>
+Workflow+1: Joshua Hesketh <josh@nitrotech.org>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Sat, 16 Jun 2018 12:44:28 +0000
+Reviewed-on: https://review.openstack.org/573079
+Project: openstack-infra/zuul-website
+Branch: refs/heads/master
