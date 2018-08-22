@@ -1,0 +1,9 @@
+Code-Review+2: Joshua Hesketh <josh@nitrotech.org>
+Code-Review+2: James E. Blair <corvus@inaugust.com>
+Workflow+1: James E. Blair <corvus@inaugust.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 22 Aug 2018 19:10:57 +0000
+Reviewed-on: https://review.openstack.org/591282
+Project: openstack-infra/zuul-website
+Branch: refs/heads/master
