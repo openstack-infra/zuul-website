@@ -1,0 +1,1 @@
+redirectmatch 302 ^/get-started(/)?$ /docs/zuul/admin/zuul-from-scratch.html
