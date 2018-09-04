@@ -1881,13 +1881,20 @@ input[type="button"],
   height: 28em;
   text-align: center;
   position: relative; }
-  #banner header {
-    position: absolute;
-    bottom: 30%;
-    left: 0;
+  #banner p {
+    display: inline-block;
+    margin: 0;
     width: 100%;
-    color: #071d49;
+    vertical-align: middle;
+    background: #212121;
+    background: rgba(27, 27, 27, 0.75);
+    color: #37c0fb;
     padding: 1.5em 0; }
+    #banner p .button {
+      margin-left: 1em; }
+  #banner header {
+    color: #071d49;
+    margin: 6%; }
     #banner header h2 {
       display: inline-block;
       margin: 0;
