@@ -1,1 +1,1 @@
-redirectmatch 302 ^/start(/)?$ /docs/zuul/admin/zuul-from-scratch.html
+redirectmatch 302 ^/start(/)?$ /docs/zuul/admin/quick-start.html
