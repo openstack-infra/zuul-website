@@ -143,6 +143,75 @@
 		    Read more about OpenLab at SuperUser.
 		  </a>
 		</p>
+
+		<h3>
+		  <a href="https://superuser.openstack.org/articles/zuul-case-study-software-factory/">
+		    Software Factory
+		  </a>
+		</h3>
+		<p>
+		Software Factory is a distribution that integrates all the
+		components as CentOS packages with an installer/operator named
+		sfconfig to manage service configuration, backup, recovery and
+		upgrades. The main Zuul advantages for their users are
+		customizable deployments and simplicity of use. The RDO project
+		has been using Software Factory successfully for about three
+		years now. The goal is to keep the same user experience from
+		upstream to downstream and to allow them to share
+		configurations, jobs, pipelines and easily run third party CI
+		jobs. With the addition of GitHub support to Zuul, Software
+		Factory can now be used without Gerrit and people are looking
+		into running their own gating CI/CD for GitHub organizations
+		with SF to use the log processing features.
+		</p><p>
+		  <a href="https://superuser.openstack.org/articles/zuul-case-study-software-factory/">
+		    Read more about Software Factory at SuperUser.
+		  </a>
+		</p>
+
+		<h3>
+		  <a href="http://superuser.openstack.org/articles/zuul-case-study-the-openstack-foundation/">
+		    OpenStack Foundation
+		  </a>
+		</h3>
+		<p>
+		OpenStack ended up in a situation where it wanted to keep gating
+		changes to OpenStack but have the ability to merge more than 24
+		changes a day. Running tests more quickly, or running fewer
+		tests were either not possible or less than ideal options.
+		Instead the infrastructure team set out to build a system (Zuul)
+		which could parallelize the serial testing of OpenStack.
+		Initially, Zuul was the coordinator for Jenkins and the two
+		systems worked together, and around April 2016, Jenkins was
+		replaced with an Ansible <https://www.ansible.com/>-based
+		execution system to improve performance and reliability. The
+		success of this Ansible-based system highly influenced the
+		decision to do the major Zuul v3 rewrite which also uses Ansible
+		to execute jobs.
+		</p><p>
+		  <a href="http://superuser.openstack.org/articles/zuul-case-study-the-openstack-foundation/">
+		    Read more about OpenStack Foundation at SuperUser.
+		  </a>
+		</p>
+
+		<h3>
+		  <a href="https://superuser.openstack.org/articles/zuul-case-study-packet-host/">
+		    Packet Host
+		  </a>
+		</h3>
+		<p>
+		Packet Host built a community cloud to support OpenStack with
+		100 concurrent VM instances each with 8 GB RAM, eight vCPUs and
+		80 GB storage running on 11 bare metal servers. Working with the
+		OpenStack Infra team has really opened my eyes up to the
+		capabilities of Zuul and the frameworks they’ve put together,
+		says John Studarus, who helped Packet Host put it together.
+		</p><p>
+		  <a href="https://superuser.openstack.org/articles/zuul-case-study-packet-host/">
+		    Read more about Packet Host at SuperUser.
+		  </a>
+		</p>
+
 	      </article>
 	    </div>
 	  </div>
