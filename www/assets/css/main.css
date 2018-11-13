@@ -1881,20 +1881,13 @@ input[type="button"],
   height: 28em;
   text-align: center;
   position: relative; }
-  #banner p {
-    display: inline-block;
-    margin: 0;
-    width: 100%;
-    vertical-align: middle;
-    background: #212121;
-    background: rgba(27, 27, 27, 0.75);
-    color: #37c0fb;
-    padding: 1.5em 0; }
-    #banner p .button {
-      margin-left: 1em; }
   #banner header {
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    width: 100%;
     color: #071d49;
-    margin: 6%; }
+    padding: 1.5em 0; }
     #banner header h2 {
       display: inline-block;
       margin: 0;
@@ -1912,7 +1905,7 @@ input[type="button"],
 
 /* Wrapper */
 .wrapper {
-  padding: 5em 0 3em 0; }
+  padding: 2em 0 1em 0; }
   .wrapper.style1 {
     background: #fff; }
   .wrapper.style2 {
@@ -2334,3 +2327,5 @@ input[type="button"],
   #footer {
     padding: 2em 20px;
     text-align: left; } }
+
+/*# sourceMappingURL=main.css.map */

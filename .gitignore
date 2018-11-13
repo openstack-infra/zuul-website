@@ -1,2 +1,4 @@
 html
 www/media
+.sass-cache/
+www/assets/css/main.css.map
