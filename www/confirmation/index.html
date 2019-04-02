@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-US">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1st November 2003), see www.w3.org" />
+<title>HTML Slidy - template for basic presentations</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="copyright" content=
+"Copyright &#169; 2005-2010 W3C (MIT, ERCIM, Keio)" />
+<meta name="duration" content="20" />
+<link rel="stylesheet" href="styles/slidy.css" type="text/css" />
+<link rel="stylesheet" href="styles/zuul.css" type="text/css" />
+<script src="scripts/slidy.js" charset="utf-8" type="text/javascript">
+</script>
+</head>
+<body>
+	<div class="background"><object id="head-logo"
+	data="graphics/zuul-logo.svg" type="image/svg+xml"
+	title="Zuul logo"><a href="http://zuul-ci.org/"><img src="graphics/zuul-logo.svg" id="head-logo-fallback" alt="Zuul logo" /></a></object></div>
+
+	<div class="background slanty">
+	<img src="graphics/zuul-logo.svg" alt="Zuul logo" />
+	</div>
+	<div class="slide cover title">
+	  	<!-- hidden style graphics to ensure they are saved with other content -->
+		<img class="hidden" src="graphics/bullet.png" alt="" />
+		<img class="hidden" src="graphics/fold.gif" alt="" />
+		<img class="hidden" src="graphics/unfold.gif" alt="" />
+		<img class="hidden" src="graphics/fold-dim.gif" alt="" />
+		<img class="hidden" src="graphics/nofold-dim.gif" alt="" />
+		<img class="hidden" src="graphics/unfold-dim.gif" alt="" />
+		<img class="hidden" src="graphics/bullet-fold.gif" alt="" />
+		<img class="hidden" src="graphics/bullet-unfold.gif" alt="" />
+		<img class="hidden" src="graphics/bullet-fold-dim.gif" alt="" />
+		<img class="hidden" src="graphics/bullet-nofold-dim.gif" alt="" />
+		<img class="hidden" src="graphics/bullet-unfold-dim.gif" alt="" />
+		<section id="cover">
+			<h1>Zuul Presentation for OpenStack Foundation Board of Directors</h1>
+			<p>James Blair<br />
+				Monty Taylor
+			<br />
+			<br />
+			<br />
+			<br />
+		</section>
+		<em>Hit the space bar or swipe left for next slide</em></p>
+	</div>
+	<div class="slide">
+		<h1>Strategic Focus</h1>
+		<h3>What is Zuul?</h3>
+		<p>Zuul is a program that drives continuous integration, delivery, and deployment systems with a focus on project gating and interrelated projects.</p>
+                <p>It is a distributed, massively-scalable, multi-tenant, multi-cloud service designed to be run on the open Internet safely and securely.</p>
+		<h3>Mission Statement</h3>
+		<p>To provide software and processes to automate continuous integration, delivery, and deployment of interrelated software projects in a secure manner using project gating.</p>
+	</div>
+	<div class="slide">
+                <h1>Technology Overview - Use Cases</h1>
+                <p>Zuul is focused on project gating, especially in scenarios involving multiple repositories with
+                   integrated deliverables. Zuul tests speculative future states that would result from landing a change
+                   rather than merely the change itself. In this it is unique in the industry.</p>
+                <p>Zuul is a scalable multi-tenant service designed to allow consolidation of administration functions,
+                   common shared libraries of content and shared test resources while empowering distributed development
+                   teams to operate autonomously.</p>
+                <p>Zuul content is directly sharable between Zuul installations.</p>
+                <p>Zuul is flexible and avoids assumptions about how software is written or deployed. Baremetal, VMs,
+                   Containers, Network Switches and Kubernetes are all primary targets that can be mixed and
+                   matched. Zuul believes CI isn't just for net-new "cloud native" apps, but should be available to
+                   everyone.</p>
+	</div>
+	<div class="slide">
+                <h1>Technology Overview - Architecture</h1>
+                <p>Zuul is a distributed system consisting of several components.</p>
+                <img src="https://zuul-ci.org/docs/zuul/_images/graphviz-539a1ab06bbf492654bf62087ba8eaa625128067.png">
+	</div>
+	</div>
+	<div class="slide">
+                <h1>Technology Overview - Implementation</h1>
+                <p>Zuul is primarily written in Python v3. The web dashboard is in React/Javascript. The zuul-proxy
+                   service is in C++.</p>
+                <p>Zuul depends on Ansible, Zookeeper, Gearman and an RDBMS. (MySQL and PostGreSQL tested)</p>
+                <p>Zuul has code review drivers for Gerrit and GitHub and node provider drivers for OpenStack, AWS, Kubernetes and Static. Support for more are both underway and welcome.</p>
+                <p>Zuul publishes tagged releases to PyPI as well as container images from master to Dockerhub.</p>
+        </div>
+	<div class="slide">
+                <h1>Technology Overview - History</h1>
+                <p>Zuul was originally written for the OpenStack project and has been running in production at scale
+                   since 2012.</p>
+                <p>Zuul v3 was released Mar 28, 2018.</p>
+                <p>Since then there have been 13 releases, with the latest, 3.7.1 released Mar 25, 2019.</p>
+                <p>Zuul is released as needed.</p>
+                <p>Zuul does not maintain branches of old code. Zuul is designed and expected to be run CD. The Zuul
+                   project considers this a feature.</p>
+	</div>
+	<div class="slide">
+		<h1>Governance</h1>
+                <p>Full governance doc can be found at <a href="https://zuul-ci.org/docs/zuul/governance.html">
+                    https://zuul-ci.org/docs/zuul/governance.html</a>.</p>
+                <p>The Zuul project is self-governing.</p>
+                <p>Decisions regarding the project are made by the Zuul Maintainers. They are team of people who are
+                   familiar with the project as a whole and act as stewards. They are expected to consider the needs
+                   of the entire community.</p>
+                <p>Changes to code, documentation, website and other project resources are done via code review. In
+                   general, approval of 2 maintainers is sought to approve changes, but depending on circumstances
+                   a greater or fewer number may be appropriate.</p>
+                <p>Other decisions are discussed on the mailing list. Maintainers strive to achieve consensus on these
+                   topics.</p>
+	</div>
+	<div class="slide">
+		<h1>Governance - Membership</h1>
+                <p>Membership of the Maintainers is decided by consensus of the Maintainers.</p>
+                <p>Existing maintainers are expected to encourage new members.</p>
+                <p>There are no artifical limits on the number of Maintainers. A large group of Maintainers is
+                   important for the health of the project</p>
+                <p>Maintainers are encouraged to become involved in all aspects of the project.</p>
+	</div>
+	<div class="slide">
+		<h1>Governance - Project Lead</h1>
+                <p>The Maintainers elect a Project Lead to articulate overall direction and promote consistency.</p>
+                <p>The Project Lead does not have any additional rights but does have extra responsibilities.</p>
+                <p>The Project Lead must pay particular attention to the overall design and direction, ensure everyone
+                   is familiar with that design, and facilitate achieving consensus.</p>
+                <p>If the project is unable to reach consensus on an issue, the Project Lead may conduct a poll of
+                   Maintainers. In the case of a tie, the Project Lead's vote will be the tie-breaker.</p>
+                <p>The Project Lead is elected to a one-year term via Condorcet from a set of self-nominated
+                Maintainers. (The current PL was installed 2019-01-14 by unanimous vote of all 13 Maintainers via <a href="https://review.openstack.org/622439">code review</a>; no Condorcet poll was required as only one candidate was nominated.)</p>
+	</div>
+	<div class="slide">
+		<h1>Technical best practices</h1>
+		<ul>
+			<li>Documentation
+                               <ul>
+                                  <li>Documentation is maintained in git with Sphinx and managed via code review.</li>
+                                  <li>The Zuul website is also maintained in git and managed via code review.</li>
+                               </ul></li>
+			<li>Code review
+                               <ul>
+                                  <li>Zuul uses the OpenDev Gerrit for all code management.</p>
+                               </ul></li>
+			<li>Testing
+                               <ul>
+                                  <li>All changes are gated by OpenDev Zuul.</li>
+                               </ul></li>
+			<li>Bug handling
+                               <ul>
+                                  <li>Bugs are tracked in OpenDev Storyboard.</li>
+                               </ul></li>
+			<li>Security considerations and vulnerability management
+                               <ul>
+                                  <li>Zuul obeys recognized security and vulnerability management best practices.</li>
+                               </ul></li>
+		</ul>
+	</div>
+	<div class="slide">
+		<h1>Open Collaboration</h1>
+		<h3>Contributions</h3>
+                <p>Current Zuul Maintainers are employed by Red Hat, BMW, OSF, SuSE and GoodMoney.</p>
+                <p>All Current Zuul Maintainers have an active role operating a Production Zuul.</p>
+		<h3>Policies and practices provide a level playing-field where open collaboration can happen</h3>
+                <p>Maintainers are expected to consider the entire community, not just their own individual needs.</p>
+                <p>All Zuul decisions are made collaboratively in community interactions.</p>
+                <p>Issues found in anyone's Production environment are treated as urgent by all.</p>
+	</div>
+	<div class="slide">
+		<h1>Four Opens</h1>
+                <p>Zuul follows the Four Opens.</p>
+                <p>Additionally, the Zuul community is closely associated with the OpenDev community, which practices
+                   Open Operations. Zuul tags releases after verifying operation at scale in OpenDev.</p>
+		<h3>Code of conduct</h3>
+		<p>The Zuul Community follows the <a href="https://www.openstack.org/legal/community-code-of-conduct/">OpenStack Foundation Code of Coduct</a>.</p>
+		<p>Zuul also behaves as a good neighbor to other confirmed and pilot projects within the OpenStack Foundation.</p>
+		<h3>License</h3>
+		<p>Zuul is mostly Apache 2. There are some sections of GPLv3 where code is loaded into Ansible processes. The zuul-proxy subproject is GPLv3.</p>
+	</div>
+	<div class="slide">
+		<h1>Active Engagement</h1>
+		<p>Zuul has been an active participant at all OpenStack Summits and PTGs since before it was split out from the Infrastructure project.</p>
+                <p>Zuul presentations are given at conferences around the world.</p>
+                <p>Zuul is being used by OpenLab, the Ansible Community, TungstenFabric and many more.</p>
+                <p>Since OpenDev runs Zuul, every OpenStack Foundation project using OpenDev is a collaborator.</p>
+	</div>
+</body>
+</html>
