@@ -1,4 +1,0 @@
-- hosts: localhost
-  roles:
-    - role: copy-site-to-artifacts
-      when: zuul_success | bool

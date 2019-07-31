@@ -1,9 +1,0 @@
-- name: Write marker text
-  copy:
-    dest: "{{ source_dir }}/.root-marker"
-    content: "Project: {{ zuul.project.name }} Branch: {{ zuul.branch }} Build: {{ zuul.build }} Revision: {{ zuul.ref }}"
-
-- name: Copy site to output directory
-  copy:
-    src: "{{ source_dir }}/"
-    dest: "{{ zuul.executor.work_root }}/artifacts/"

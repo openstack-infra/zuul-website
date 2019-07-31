@@ -1,4 +1,0 @@
-- name: Copy site to output directory
-  copy:
-    src: "{{ source_dir }}"
-    dest: "{{ zuul.executor.log_root }}"

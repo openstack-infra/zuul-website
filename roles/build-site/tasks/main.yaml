@@ -1,8 +1,0 @@
-- name: Copy website to output directory
-  copy:
-    src: "{{ zuul.executor.work_root }}/{{ zuul.projects['git.openstack.org/openstack-infra/zuul-website'].src_dir }}/www/"
-    dest: "{{ output_dir }}"
-- name: Copy media to output directory
-  copy:
-    src: "{{ zuul.executor.work_root }}/{{ zuul.projects['git.openstack.org/openstack-infra/zuul-website-media'].src_dir }}/media/"
-    dest: "{{ output_dir }}/media"

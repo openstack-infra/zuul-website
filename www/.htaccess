@@ -1,1 +1,0 @@
-redirectmatch 302 ^/start(/)?$ /docs/zuul/admin/quick-start.html
